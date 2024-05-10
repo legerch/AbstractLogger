@@ -40,10 +40,13 @@ set(PROJECT_HEADERS
     libraryglobal.h
 
     base/person.h
+
+    logs/ilogger.h
 )
 
 set(PROJECT_SOURCES
     base/person.cpp
+
 )
 
 set(PROJECT_RSC
