@@ -42,11 +42,15 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 # Manage app files
 set(PROJECT_HEADERS
     mainwindow.h
+
+    sinks/loggerqt.h
 )
 
 set(PROJECT_SOURCES
     main.cpp
     mainwindow.cpp
+
+    sinks/loggerqt.cpp
 )
 
 set(PROJECT_UI
