@@ -17,15 +17,14 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_btn_registerPerson_clicked();
-
-    void on_btn_clearPerson_clicked();
-
 private:
     void initUserInterface();
 
     void uiInitTitle();
+
+private slots:
+    void on_btn_registerPerson_clicked();
+    void on_btn_clearPerson_clicked();
 
 private:
     Ui::MainWindow *ui;

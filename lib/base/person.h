@@ -32,6 +32,6 @@ private:
     int m_age;
 };
 
-} // gen
+} // Namespace gen
 
 #endif // GENPERSON_H
