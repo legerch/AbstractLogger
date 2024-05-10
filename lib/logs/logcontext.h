@@ -1,13 +1,13 @@
 #ifndef LOGCONTEXT_H
 #define LOGCONTEXT_H
 
+#include "libraryglobal.h"
+
 namespace gen{
 
 class LogContext
 {
-public: /* Disable class copy */
-    LogContext(const LogContext &) = delete;\
-    LogContext &operator=(const LogContext &) = delete;
+    LIBRARYNAME_DISABLE_COPY(LogContext)
 
 public:
     constexpr LogContext(const char *filename, int lineNumber, const char *fctName) :
