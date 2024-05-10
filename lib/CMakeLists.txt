@@ -49,7 +49,6 @@ set(PROJECT_HEADERS
 set(PROJECT_SOURCES
     base/person.cpp
 
-    logs/logcontext.cpp
     logs/logmanager.cpp
 )
 
