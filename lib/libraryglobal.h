@@ -45,6 +45,17 @@
  * not trigger warning on expected
  * behaviour
  *********************************/
-#define LIBRARYNAME_FALLTHROUGH  [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
+#define LIBRARYNAME_FALLTHROUGH     [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
+
+/**********************************
+ * Functions informations
+ *********************************/
+#define LIBRARYNAME_FCTNAME         __func__
+
+#if defined(_MSC_VER)
+#define LIBRARYNAME_FCTSIG          __FUNCSIG__
+#else
+#define LIBRARYNAME_FCTSIG          __PRETTY_FUNCTION__
+#endif
 
 #endif // LIBRARYNAME_GLOBAL_H
