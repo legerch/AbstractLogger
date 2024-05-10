@@ -41,7 +41,7 @@ Person::Person(const std::string &name, int age)
     setName(name);
     setAge(age);
 
-    LOG_DEBUG("Create person");
+    GEN_LOG_DEBUG("Create person");
 }
 
 Person::Person()
@@ -74,7 +74,7 @@ void Person::clear()
     m_name.clear();
     m_age = -1;
 
-    LOG_INFO("Clear person");
+    GEN_LOG_INFO("Clear person");
 }
 
 bool operator==(const Person &left, const Person &right)
