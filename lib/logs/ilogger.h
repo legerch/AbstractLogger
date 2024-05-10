@@ -1,6 +1,8 @@
 #ifndef ILOGGER_H
 #define ILOGGER_H
 
+#include "logcontext.h"
+
 #include <string>
 
 namespace gen{
@@ -19,7 +21,7 @@ public:
     };
 
 public:
-    virtual void log(Level level, const std::string &msg) = 0;
+    virtual void log(Level level, const LogContext &context, const std::string &msg) = 0;
 };
 
 } // Namespace gen

@@ -1,6 +1,8 @@
 #ifndef LOGCONTEXT_H
 #define LOGCONTEXT_H
 
+namespace gen{
+
 class LogContext
 {
 public: /* Disable class copy */
@@ -16,5 +18,7 @@ public:
     const char *file = nullptr;
     const char *function = nullptr;
 };
+
+} // Namespace gen
 
 #endif // LOGCONTEXT_H

@@ -43,12 +43,14 @@ set(PROJECT_HEADERS
 
     logs/ilogger.h
     logs/logcontext.h
+    logs/logmanager.h
 )
 
 set(PROJECT_SOURCES
     base/person.cpp
 
     logs/logcontext.cpp
+    logs/logmanager.cpp
 )
 
 set(PROJECT_RSC
