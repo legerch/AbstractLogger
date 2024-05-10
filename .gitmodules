@@ -1,0 +1,3 @@
+[submodule "deps/qlogger"]
+	path = deps/qlogger
+	url = git@github.com:legerch/QLogger.git
