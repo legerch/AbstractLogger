@@ -42,11 +42,13 @@ set(PROJECT_HEADERS
     base/person.h
 
     logs/ilogger.h
+    logs/logcontext.h
 )
 
 set(PROJECT_SOURCES
     base/person.cpp
 
+    logs/logcontext.cpp
 )
 
 set(PROJECT_RSC
