@@ -8,29 +8,29 @@
 /*****************************/
 
 /* Use to retrieve context informations */
-#define _GEN_LOG_CTX_FILE   static_cast<const char *>(__FILE__)
-#define _GEN_LOG_CTX_LINE   __LINE__
-#define _GEN_LOG_CTX_FCT    static_cast<const char *>(LIBRARYNAME_FCTNAME)
+#define _LIBRA_LOG_CTX_FILE   static_cast<const char *>(__FILE__)
+#define _LIBRA_LOG_CTX_LINE   __LINE__
+#define _LIBRA_LOG_CTX_FCT    static_cast<const char *>(LIBRA_FCTNAME)
 
 /* Create macros for easier log usage */
-#define _GEN_LOG_GENERIC(level, msg)    gen::LogManager::registerLog(level, _GEN_LOG_CTX_FILE, _GEN_LOG_CTX_LINE, _GEN_LOG_CTX_FCT, msg)
+#define _LIBRA_LOG_GENERIC(level, msg)    libra::LogManager::registerLog(level, _LIBRA_LOG_CTX_FILE, _LIBRA_LOG_CTX_LINE, _LIBRA_LOG_CTX_FCT, msg)
 
-#define GEN_LOG_FATAL(msg)  _GEN_LOG_GENERIC(gen::ILogger::LOG_LVL_FATAL, msg)
-#define GEN_LOG_ERROR(msg)  _GEN_LOG_GENERIC(gen::ILogger::LOG_LVL_ERROR, msg)
-#define GEN_LOG_WARN(msg)   _GEN_LOG_GENERIC(gen::ILogger::LOG_LVL_WARNING, msg)
-#define GEN_LOG_INFO(msg)   _GEN_LOG_GENERIC(gen::ILogger::LOG_LVL_INFO, msg)
-#define GEN_LOG_DEBUG(msg)  _GEN_LOG_GENERIC(gen::ILogger::LOG_LVL_DEBUG, msg)
+#define LIBRA_LOG_FATAL(msg)  _LIBRA_LOG_GENERIC(libra::ILogger::LOG_LVL_FATAL, msg)
+#define LIBRA_LOG_ERROR(msg)  _LIBRA_LOG_GENERIC(libra::ILogger::LOG_LVL_ERROR, msg)
+#define LIBRA_LOG_WARN(msg)   _LIBRA_LOG_GENERIC(libra::ILogger::LOG_LVL_WARNING, msg)
+#define LIBRA_LOG_INFO(msg)   _LIBRA_LOG_GENERIC(libra::ILogger::LOG_LVL_INFO, msg)
+#define LIBRA_LOG_DEBUG(msg)  _LIBRA_LOG_GENERIC(libra::ILogger::LOG_LVL_DEBUG, msg)
 
 /*****************************/
 /* Namespace definitions     */
 /*****************************/
-namespace gen{
+namespace libra{
 
 /*****************************/
 /* Class definitions         */
 /*****************************/
 
-class LogManager
+class LIBRA_EXPORT LogManager
 {
 
 public:
@@ -43,6 +43,6 @@ private:
     static ILogger *m_refLogger;
 };
 
-} // Namespace gen
+} // namespace libra
 
 #endif // LOGMANAGER_H

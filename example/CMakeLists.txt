@@ -95,8 +95,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(${PROJECT_NAME} PRIVATE qlogger)
 target_compile_definitions(${PROJECT_NAME} PRIVATE QT_MESSAGELOGCONTEXT)
 
-# Simple library
-target_link_libraries(${PROJECT_NAME} PUBLIC genericlib)
+# Libra library
+target_link_libraries(${PROJECT_NAME} PUBLIC libra)
 
 # Compile needed definitions
 # No custom definitions needed

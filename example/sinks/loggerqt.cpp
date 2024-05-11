@@ -2,7 +2,7 @@
 
 #include <QMessageLogger>
 
-void LoggerQt::log(Level level, const gen::LogContext &context, const std::string &msg)
+void LoggerQt::log(Level level, const libra::LogContext &context, const std::string &msg)
 {
     /* Format message to Qt logging system */
     const QMessageLogger msgLogger(context.file, context.line, context.function);

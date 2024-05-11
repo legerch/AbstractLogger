@@ -24,7 +24,7 @@
 /* Start namespace           */
 /*****************************/
 
-namespace gen{
+namespace libra{
 
 /*****************************/
 /* Constants definitions     */
@@ -62,7 +62,7 @@ void LogManager::registerLog(ILogger::Level level, const char *filename, int lin
 /* End namespace             */
 /*****************************/
 
-} // namespace gen
+} // namespace libra
 
 /*****************************/
 /* End file                  */

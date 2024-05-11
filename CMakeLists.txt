@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.14)
-project(LibraryMain LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.19)
+project(LibraMain LANGUAGES CXX)
 
 # Set C++ standard to use
 set(CMAKE_CXX_STANDARD 17)

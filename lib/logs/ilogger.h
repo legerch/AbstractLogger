@@ -5,7 +5,7 @@
 
 #include <string>
 
-namespace gen{
+namespace libra{
 
 class ILogger
 {
@@ -24,6 +24,6 @@ public:
     virtual void log(Level level, const LogContext &context, const std::string &msg) = 0;
 };
 
-} // Namespace gen
+} // namespace libra
 
 #endif // ILOGGER_H

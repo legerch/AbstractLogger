@@ -3,11 +3,11 @@
 
 #include "logs/logmanager.h"
 
-class LoggerQt : public gen::ILogger
+class LoggerQt : public libra::ILogger
 {
 
 public:
-    virtual void log(Level level, const gen::LogContext &context, const std::string &msg) override;
+    virtual void log(Level level, const libra::LogContext &context, const std::string &msg) override;
 };
 
 #endif // LOGGERQT_H

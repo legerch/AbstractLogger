@@ -1,13 +1,13 @@
 #ifndef LOGCONTEXT_H
 #define LOGCONTEXT_H
 
-#include "libraryglobal.h"
+#include "libraglobal.h"
 
-namespace gen{
+namespace libra{
 
 class LogContext
 {
-    LIBRARYNAME_DISABLE_COPY(LogContext)
+    LIBRA_DISABLE_COPY(LogContext)
 
 public:
     constexpr LogContext(const char *filename, int lineNumber, const char *fctName) :
@@ -19,6 +19,6 @@ public:
     const char *function = nullptr;
 };
 
-} // Namespace gen
+} // namespace libra
 
 #endif // LOGCONTEXT_H

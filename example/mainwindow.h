@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-#include "base/person.h"
+#include "mock/person.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +29,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    gen::Person m_member;
+    libra::Person m_member;
 };
 
 #endif // MAINWINDOW_H

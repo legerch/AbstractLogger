@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     /* Set logs */
     // Library dependencies
     LoggerQt libLogger;
-    gen::LogManager::setLogger(&libLogger);
+    libra::LogManager::setLogger(&libLogger);
 
     // Application
     QLogger::QLogHandler::instance().init(APP_LOG_FILE, APP_LOG_NB_FILES, APP_LOG_SIZE, APP_LOG_ENABLE_CONSOLE);
