@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.19)
 
 # Set project properties
-set(PROJECT_NAME genericlib)
+set(PROJECT_NAME libra)
 set(PROJECT_VERSION_SEMANTIC 0.0.1)
-set(PROJECT_VERSION_CPP_MIN 17)
+set(PROJECT_VERSION_CPP_MIN 11)
 
 # Set project options
-# Options availables for external project start with "EXT_OPT_LIBRARYNAME_", those options can be use in top CMakeFiles.
+# Options availables for external project start with "EXT_OPT_LIBRA_", those options can be use in top CMakeFiles.
 # All options are disabled by default.
 # List of available options :
 # - No available options
@@ -37,13 +37,19 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/config.h.in" "${CMAKE_CURRENT_SOURCE
 # Manage library files
 set(PROJECT_HEADERS
     config.h
-    libraryglobal.h
+    libraglobal.h
 
-    base/person.h
+    mock/person.h
+
+    logs/ilogger.h
+    logs/logcontext.h
+    logs/logmanager.h
 )
 
 set(PROJECT_SOURCES
-    base/person.cpp
+    mock/person.cpp
+
+    logs/logmanager.cpp
 )
 
 set(PROJECT_RSC
@@ -80,12 +86,12 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 ## No libraries needed
 
 # Compile needed definitions
-target_compile_definitions(${PROJECT_NAME} PRIVATE GENERIC_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRA_LIBRARY_BUILD)
 
 # Definition which depends on options
 # Ex :
-# if(EXT_OPT_LIBRARYNAME_XYZ)
-#   target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRARYNAME_ENABLE_XYZ)
+# if(EXT_OPT_LIBRA_XYZ)
+#   target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRA_ENABLE_XYZ)
 # endif()
 
 # Directories to includes

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.19)
 # Set project properties
 set(PROJECT_NAME AppExample)
 set(PROJECT_VERSION_SEMANTIC 0.0.1)
-set(PROJECT_VERSION_CPP_MIN 17)
+set(PROJECT_VERSION_CPP_MIN 11)
 
 # Set project options
 # Options availables for external project start with "EXT_OPT_APPEXAMPLE_", those options can be use in top CMakeFiles.
@@ -42,11 +42,15 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 # Manage app files
 set(PROJECT_HEADERS
     mainwindow.h
+
+    sinks/loggerqt.h
 )
 
 set(PROJECT_SOURCES
     main.cpp
     mainwindow.cpp
+
+    sinks/loggerqt.cpp
 )
 
 set(PROJECT_UI
@@ -91,8 +95,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(${PROJECT_NAME} PRIVATE qlogger)
 target_compile_definitions(${PROJECT_NAME} PRIVATE QT_MESSAGELOGCONTEXT)
 
-# Simple library
-target_link_libraries(${PROJECT_NAME} PUBLIC genericlib)
+# Libra library
+target_link_libraries(${PROJECT_NAME} PUBLIC libra)
 
 # Compile needed definitions
 # No custom definitions needed

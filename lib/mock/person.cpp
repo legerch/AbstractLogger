@@ -1,5 +1,7 @@
 #include "person.h"
 
+#include "logs/logmanager.h"
+
 /*****************************/
 /* Class documentations      */
 /*****************************/
@@ -24,7 +26,7 @@
 /* Start namespace           */
 /*****************************/
 
-namespace gen{
+namespace libra{
 
 /*****************************/
 /* Constants definitions     */
@@ -38,6 +40,8 @@ Person::Person(const std::string &name, int age)
 {
     setName(name);
     setAge(age);
+
+    LIBRA_LOG_DEBUG("Create person");
 }
 
 Person::Person()
@@ -69,6 +73,8 @@ void Person::clear()
 {
     m_name.clear();
     m_age = -1;
+
+    LIBRA_LOG_INFO("Clear person");
 }
 
 bool operator==(const Person &left, const Person &right)
@@ -86,7 +92,7 @@ bool operator!=(const Person &left, const Person &right)
 /* End namespace             */
 /*****************************/
 
-} // namespace gen
+} // namespace libra
 
 /*****************************/
 /* End file                  */

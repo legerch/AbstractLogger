@@ -1,13 +1,13 @@
 #ifndef GENPERSON_H
 #define GENPERSON_H
 
-#include "libraryglobal.h"
+#include "libraglobal.h"
 
 #include <string>
 
-namespace gen{
+namespace libra{
 
-class LIBRARYNAME_EXPORT Person
+class LIBRA_EXPORT Person
 {
 
 public:
@@ -24,14 +24,14 @@ public:
     void clear();
 
 public:
-    LIBRARYNAME_EXPORT friend bool operator==(const Person &left, const Person &right);
-    LIBRARYNAME_EXPORT friend bool operator!=(const Person &left, const Person &right);
+    LIBRA_EXPORT friend bool operator==(const Person &left, const Person &right);
+    LIBRA_EXPORT friend bool operator!=(const Person &left, const Person &right);
 
 private:
     std::string m_name;
     int m_age;
 };
 
-} // gen
+} // namespace libra
 
 #endif // GENPERSON_H

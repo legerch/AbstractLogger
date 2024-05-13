@@ -69,7 +69,7 @@ void MainWindow::uiInitTitle()
 
 void MainWindow::on_btn_registerPerson_clicked()
 {
-    m_member = gen::Person("test", 1);
+    m_member = libra::Person(ui->textEdit_personName->toPlainText().toStdString(), ui->spinBox_personAge->value());
 }
 
 void MainWindow::on_btn_clearPerson_clicked()
