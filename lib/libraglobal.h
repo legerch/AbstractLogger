@@ -45,17 +45,19 @@
  * not trigger warning on expected
  * behaviour
  *********************************/
-#define LIBRA_FALLTHROUGH     [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
+#define LIBRA_FALLTHROUGH       [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
 
 /**********************************
- * Functions informations
+ * Context informations
  *********************************/
-#define LIBRA_FCTNAME         __func__
+#define LIBRA_FILE              __FILE__
+#define LIBRA_LINE              __LINE__
+#define LIBRA_FCTNAME           __func__
 
 #if defined(_MSC_VER)
-#define LIBRA_FCTSIG          __FUNCSIG__
+#define LIBRA_FCTSIG            __FUNCSIG__
 #else
-#define LIBRA_FCTSIG          __PRETTY_FUNCTION__
+#define LIBRA_FCTSIG            __PRETTY_FUNCTION__
 #endif
 
 /**********************************

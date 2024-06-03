@@ -8,8 +8,8 @@
 /*****************************/
 
 /* Use to retrieve context informations */
-#define _LIBRA_LOG_CTX_FILE   static_cast<const char *>(__FILE__)
-#define _LIBRA_LOG_CTX_LINE   __LINE__
+#define _LIBRA_LOG_CTX_FILE   static_cast<const char *>(LIBRA_FILE)
+#define _LIBRA_LOG_CTX_LINE   LIBRA_LINE
 #define _LIBRA_LOG_CTX_FCT    static_cast<const char *>(LIBRA_FCTNAME)
 
 /* Create macros for easier log usage */
