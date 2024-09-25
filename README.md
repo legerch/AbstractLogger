@@ -1,4 +1,4 @@
-This repository contains an implementation example of an abstract logger in a library.
+This repository contains an implementation example of an abstract logger in a C++ library.
 
 **Table of contents :**
 - [1. Requirements](#1-requirements)
@@ -23,13 +23,19 @@ No dependencies needed
 
 This repository contains an example of an **Abstract logger** that can be useful when developping a library. This allow to **not be** tied to a specific log dependency/api, allowing users to choose their own (_[spdlog][repo-spdlog], [glog][repo-glog], etc..._).  
 
+> [!TIP]
+> If needed, a [library template][repo-template-lib] repository also exist to help for the library creation
+
 ## 2.1. Usage inside library
 
-**Abstract Logger** behaviour can be found inside folder [lib/logs][lib-logs], some _tweaks_ are needed and directly dependant to developped library:
+**Abstract Logger** behaviour can be found inside folder [lib/logs][lib-logs-details], some _tweaks_ are needed and directly dependant to developped library:
 - Set proper namespace in all **3 classes**(in our example, _libra_ is the name of our library)
 - Set log macros names (replace `#define LIBRA_LOG_FATAL(msg)` by `YOURLIBNAME_LOG_FATAL(msg)`)
 
 That is all, now to you use log, caller just need to call proper macro (example can be found inside mock class [Person][lib-mock-person]).
+
+> [!TIP]
+> For easier integration, a single pair _header/source_ exists at [lib/logs_single_file][lib-logs-single] folder
 
 ## 2.2. Set logger for users of the library
 
@@ -55,13 +61,15 @@ This library is licensed under [MIT license][repo-license].
 
 <!-- Links of this repository -->
 [repo-license]: LICENSE
-[lib-logs]: lib/logs/
+[lib-logs-details]: lib/logs_details/
+[lib-logs-single]: lib/logs_single_file/
 [lib-mock-person]: lib/mock/person.cpp
 [app-sinks]: example/sinks/
 [app-sink-qt]: example/sinks/loggerqt.h
 
 <!-- External links -->
 [doxygen-official]: https://www.doxygen.nl/index.html
+[repo-template-lib]: https://github.com/legerch/library-template
 [repo-spdlog]: https://github.com/gabime/spdlog
 [repo-glog]: https://github.com/google/glog
 

@@ -1,8 +1,6 @@
 #ifndef LIBRA_GLOBAL_H
 #define LIBRA_GLOBAL_H
 
-#include "config.h"
-
 /**********************************
  * Library management
  *********************************/
@@ -19,6 +17,25 @@
 #       define LIBRA_EXPORT __declspec(dllimport)
 #   endif
 #endif
+
+/**********************************
+ * Version management
+ *********************************/
+#define LIBRA_VERSION_ENCODE(major, minor, path)    ((major) * 10000 + (minor) * 100 + (patch)) /**< Use to perform compilation version comparisons. Example:
+                                                                                                    \code{.cpp}
+                                                                                                    #if LIBRA_VERSION > LIBRA_VERSION_ENCODE(1,0,0)
+                                                                                                        // Do stuff for version 1.0.0 or higher
+                                                                                                    #else
+                                                                                                        // Do stuff for version 0.0.x
+                                                                                                    #endif
+                                                                                                    \endcode
+                                                                                                */
+
+#define LIBRA_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define LIBRA_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define LIBRA_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define LIBRA_VERSION       LIBRA_VERSION_ENCODE(LIBRA_VERSION_MAJOR, LIBRA_VERSION_MINOR, LIBRA_VERSION_PATCH)
+#define LIBRA_VERSION_STR   "@PROJECT_VERSION@"
 
 /**********************************
  * Deprecations warnings
@@ -45,11 +62,13 @@
  * not trigger warning on expected
  * behaviour
  *********************************/
-#define LIBRA_FALLTHROUGH     [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
+#define LIBRA_FALLTHROUGH  [[fallthrough]]    /**< Indicates that the fall through from the previous case label is intentional and should not be diagnosed by a compiler that warns on fallthrough */
 
 /**********************************
- * Functions informations
+ * Context informations
  *********************************/
+#define LIBRA_FILE            __FILE__
+#define LIBRA_LINE            __LINE__
 #define LIBRA_FCTNAME         __func__
 
 #if defined(_MSC_VER)
@@ -57,6 +76,12 @@
 #else
 #define LIBRA_FCTSIG          __PRETTY_FUNCTION__
 #endif
+
+/**********************************
+ * Variables attributes
+ *********************************/
+#define LIBRA_VAR_MAYBE_UNUSED      [[maybe_unused]]
+#define LIBRA_VAR_UNUSED            LIBRA_VAR_MAYBE_UNUSED
 
 /**********************************
  * Classes behaviours

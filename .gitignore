@@ -11,3 +11,4 @@ build/
 
 # Auto generated files
 config.h
+libraglobal.h

@@ -32,7 +32,7 @@ message(STATUS "Project \"${PROJECT_NAME}\" compiled with C++ standard ${CMAKE_C
 ## Example: find_package(nlohmann_json 3.11.3 REQUIRED)
 
 # Configure file project - File containing macro that can be used in project
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/config.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/config.h")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/libraglobal.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/libraglobal.h")
 
 # Manage library files
 set(PROJECT_HEADERS
@@ -41,15 +41,15 @@ set(PROJECT_HEADERS
 
     mock/person.h
 
-    logs/ilogger.h
-    logs/logcontext.h
-    logs/logmanager.h
+    logs_details/ilogger.h
+    logs_details/logcontext.h
+    logs_details/logmanager.h
 )
 
 set(PROJECT_SOURCES
     mock/person.cpp
 
-    logs/logmanager.cpp
+    logs_details/logmanager.cpp
 )
 
 set(PROJECT_RSC
