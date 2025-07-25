@@ -24,7 +24,7 @@ No dependencies needed
 This repository contains an example of an **Abstract logger** that can be useful when developping a library. This allow to **not be** tied to a specific log dependency/api, allowing users to choose their own (_[spdlog][repo-spdlog], [glog][repo-glog], etc..._).  
 
 > [!TIP]
-> If needed, a [library template][repo-template-lib] repository also exist to help for the library creation
+> If needed, a [project template][repo-template-projects] repository also exist to help for the library creation
 
 ## 2.1. Usage inside library
 
@@ -84,7 +84,7 @@ This library is licensed under [MIT license][repo-license].
 
 <!-- External links -->
 [doxygen-official]: https://www.doxygen.nl/index.html
-[repo-template-lib]: https://github.com/legerch/library-template
+[repo-template-projects]: https://github.com/legerch/projects-template
 [repo-spdlog]: https://github.com/gabime/spdlog
 [repo-glog]: https://github.com/google/glog
 
